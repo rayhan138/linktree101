@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rayhan Khan — Links</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- ░░ LAYER 1 — hidden source image for WebGL texture ░░ -->
+        <img
+            id="custom-bg"
+            src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1200&q=80"
+            alt=""
+            crossorigin="anonymous"
+            aria-hidden="true"
+        />
+
+        <!-- ░░ LAYER 2 — WebGL rain canvas ░░ -->
+        <canvas id="bg-canvas"></canvas>
+
+        <!-- ░░ LAYER 3 — dark tint overlay ░░ -->
+        <div id="color-overlay"></div>
+
+        <!-- ░░ LAYER 4 — UI ░░ -->
+        <main class="mobile-wrapper">
+            <!-- ── Profile card ── -->
+            <header class="glass-panel profile-panel">
+                <div class="avatar-wrap">
+                    <img
+                        src="https://api.dicebear.com/7.x/notionists/svg?seed=Luna"
+                        alt="Rayhan Khan"
+                        class="avatar"
+                    />
+                </div>
+
+                <h1 class="name">Rayhan Khan</h1>
+                <p class="handle">@wrafiz</p>
+
+                <p class="bio">
+                    Building open-source tools &amp; browser extensions.
+                </p>
+            </header>
+
+            <!-- ── Links card ── -->
+            <section class="glass-panel links-panel" aria-label="Links">
+                <a
+                    href="https://wrafiz-.github.io/linkme/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="link-btn"
+                    onclick="triggerLoading(this, event)"
+                >
+                    <span class="btn-icon"
+                        ><i class="fa-solid fa-layer-group"></i
+                    ></span>
+                    <span class="btn-body">
+                        <span class="btn-label">LinkMe Themes</span>
+                        <span class="btn-sub">Browse all profile themes</span>
+                    </span>
+                    <span class="btn-arrow"
+                        ><i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                    <div class="spinner"></div>
+                </a>
+
+                <a
+                    href="https://github.com/rayhan138"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="link-btn"
+                    onclick="triggerLoading(this, event)"
+                >
+                    <span class="btn-icon"
+                        ><i class="fa-brands fa-github"></i
+                    ></span>
+                    <span class="btn-body">
+                        <span class="btn-label">GitHub Profile</span>
+                        <span class="btn-sub">Repos, contributions & more</span>
+                    </span>
+                    <span class="btn-arrow"
+                        ><i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                    <div class="spinner"></div>
+                </a>
+
+                <a
+                    href="https://wrafiz-.github.io/linkme/aurora/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="link-btn"
+                    onclick="triggerLoading(this, event)"
+                >
+                    <span class="btn-icon"
+                        ><i class="fa-solid fa-wand-magic-sparkles"></i
+                    ></span>
+                    <span class="btn-body">
+                        <span class="btn-label">Aurora Theme</span>
+                        <span class="btn-sub">Northern-lights linktree</span>
+                    </span>
+                    <span class="btn-arrow"
+                        ><i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                    <div class="spinner"></div>
+                </a>
+
+                <a
+                    href="https:/blinkeye.app/en"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="link-btn"
+                    onclick="triggerLoading(this, event)"
+                >
+                    <span class="btn-icon"
+                        ><i class="fa-solid fa-bolt"></i
+                    ></span>
+                    <span class="btn-body">
+                        <span class="btn-label">Blink Eye</span>
+                        <span class="btn-sub"
+                            >Eye Care Reminder App</span
+                        >
+                    </span>
+                    <span class="btn-arrow"
+                        ><i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                    <div class="spinner"></div>
+                </a>
+
+                <a
+                    href="mailto:wrafiz.k@gmail.com"
+                    class="link-btn"
+                    onclick="triggerLoading(this, event)"
+                >
+                    <span class="btn-icon"
+                        ><i class="fa-solid fa-envelope"></i
+                    ></span>
+                    <span class="btn-body">
+                        <span class="btn-label">Say Hello</span>
+                        <span class="btn-sub">wrafiz.k@gmail.com</span>
+                    </span>
+                    <span class="btn-arrow"
+                        ><i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                    <div class="spinner"></div>
+                </a>
+
+                <!-- ── Divider ── -->
+                <div class="social-divider" aria-hidden="true">
+                    <span class="divider-line"></span>
+                    <span class="divider-label">Find me on</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <!-- ── Social row ── -->
+                <div class="social-row" role="list">
+                    <a
+                        href="https://github.com/rayhan138"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="social-circle"
+                        aria-label="GitHub"
+                        role="listitem"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a
+                        href="https://twitter.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="social-circle"
+                        aria-label="X / Twitter"
+                        role="listitem"
+                    >
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="social-circle"
+                        aria-label="LinkedIn"
+                        role="listitem"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        href="https://dribbble.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="social-circle"
+                        aria-label="Dribbble"
+                        role="listitem"
+                    >
+                        <i class="fa-brands fa-dribbble"></i>
+                    </a>
+
+                    <a
+                        href="https://instagram.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="social-circle"
+                        aria-label="Instagram"
+                        role="listitem"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <span class="heart"></span>
+            </footer>
+        </main>
+
+        <!-- ░░ Scripts ░░ -->
+        <script src="https://fyildiz1974.github.io/web/files/raindrops.js"></script>
+
+        <script>
+            /* ── Loading animation ── */
+            function triggerLoading(btn, event) {
+                event.preventDefault();
+                if (btn.classList.contains("is-loading")) return;
+                btn.classList.add("is-loading");
+                const href = btn.getAttribute("href");
+                setTimeout(() => {
+                    btn.classList.remove("is-loading");
+                    if (href && href !== "#" && !href.startsWith("mailto")) {
+                        window.open(href, "_blank", "noreferrer");
+                    } else if (href && href.startsWith("mailto")) {
+                        window.location.href = href;
+                    }
+                }, 1200);
+            }
+
+            /* ── Raindrops.js init ── */
+            document.addEventListener("DOMContentLoaded", () => {
+                const bgImg = document.getElementById("custom-bg");
+                const canvas = document.getElementById("bg-canvas");
+
+                function initRain() {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+
+                    new Raindrops(canvas, canvas.width, canvas.height, {
+                        renderDropsOnTop: true,
+                        brightness: 1.04,
+                        alphaMultiply: 6,
+                        alphaSubtract: 3,
+                        minR: 10,
+                        maxR: 40,
+                        rainChance: 0.35,
+                        rainLimit: 6,
+                        dropletsRate: 50,
+                        dropletsSize: [3, 5.5],
+                        trailRate: 1,
+                        trailScaleRange: [0.2, 0.45],
+                        fg: bgImg,
+                        bg: bgImg,
+                    });
+                }
+
+                if (bgImg.complete) {
+                    initRain();
+                } else {
+                    bgImg.addEventListener("load", initRain);
+                }
+
+                window.addEventListener("resize", () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                });
+            });
+        </script>
+    </body>
+</html>

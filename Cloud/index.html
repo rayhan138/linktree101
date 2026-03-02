@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shmo Card Theme - Midnight Sky</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- The Animated Parallax Background -->
+<div class="background-container">
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds"></div>
+  <!-- Resized and re-positioned moon -->
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" class="moon" alt="Moon">
+</div>
+
+<!-- The Mobile App UI -->
+<div class="shmo-container">
+  <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Luna" alt="Avatar" class="profile-pic">
+  <h1 class="profile-name">Luna Dreams</h1>
+  <p class="profile-bio">Night Owl & Developer</p>
+
+  <div class="links-wrapper">
+    
+    <!-- Card-style links -->
+    <a href="#" class="link-card">
+      <div class="card-icon">
+        <i class="fas fa-palette"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">LinkMe Themes</h3>
+        <p class="card-subtitle">Browse all profile themes</p>
+      </div>
+      <i class="fas fa-chevron-right card-arrow"></i>
+    </a>
+
+    <a href="#" class="link-card">
+      <div class="card-icon">
+        <i class="fab fa-github"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">GitHub Profile</h3>
+        <p class="card-subtitle">Repos, contributions & more</p>
+      </div>
+      <i class="fas fa-chevron-right card-arrow"></i>
+    </a>
+
+    <a href="#" class="link-card">
+      <div class="card-icon">
+        <i class="fas fa-layer-group"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Aurora Theme</h3>
+        <p class="card-subtitle">Northern-lights linktree</p>
+      </div>
+      <i class="fas fa-chevron-right card-arrow"></i>
+    </a>
+
+    <a href="#" class="link-card">
+      <div class="card-icon">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Blink Eye</h3>
+        <p class="card-subtitle">Eye Care Reminder App</p>
+      </div>
+      <i class="fas fa-chevron-right card-arrow"></i>
+    </a>
+
+    <a href="#" class="link-card">
+      <div class="card-icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Say Hello</h3>
+        <p class="card-subtitle">wrafiz.k@gmail.com</p>
+      </div>
+      <i class="fas fa-chevron-right card-arrow"></i>
+    </a>
+    <!-- Social Section -->
+<div class="social-section">
+  <p class="social-title">FIND ME ON</p>
+  
+  <div class="social-icons">
+    <a href="#" class="social-btn" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="#" class="social-btn" target="_blank">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="#" class="social-btn" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="social-btn" target="_blank">
+      <i class="fab fa-dribbble"></i>
+    </a>
+    <a href="#" class="social-btn" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+  // The tiny JS snippet required by the client to demonstrate loading
+  function simulateLoad(btn) {
+    if (btn.classList.contains('is-loading')) return; // Prevent double clicks
+    
+    btn.classList.add('is-loading');
+    
+    // Simulate a network request, remove loading after 2 seconds
+    setTimeout(() => {
+      btn.classList.remove('is-loading');
+    }, 2000);
+  }
+</script>
+
+</body>
+</html>
